@@ -1,5 +1,5 @@
 '''Lab 01, exercise 07'''
-n = input()
+n = input('Ввод: ')
 k = []
 
 for x in range(len(n)):
@@ -20,4 +20,6 @@ while x < len(n):
         break
     x += step
 
-print(''.join(k))
+print('Вывод:', ''.join(k))
+
+
