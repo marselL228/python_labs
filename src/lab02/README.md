@@ -77,7 +77,6 @@ print(col_sums([[1, 2], [3]]))
 ## Задание C - tuples.py
 
 #### пример 
-```markdown
 ```
 print(format_record(("Иванов Иван Иванович", "BIVT-25", 4.6)))  
 print(format_record(("Петров Петр ", "IKBO-12", 5.0)))  
