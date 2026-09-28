@@ -5,8 +5,7 @@
 ### 1. min_max
 
 #### Пример
-```markdown
-```python
+```
 print(min_max([3, -1, 5, 5, 0]))
 print(min_max([42]))
 print(min_max([-5, -2, -9]))
@@ -18,8 +17,7 @@ print(min_max([]))
 ### 2. unique_sorted
 
 #### Пример
-```markdown
-```python
+```
 print(unique_sorted([3, 1, 2, 1, 3]))
 print(unique_sorted([]))
 print(unique_sorted([-1, -1, 0, 2, 2]))
@@ -30,8 +28,7 @@ print(unique_sorted([1.0, 1, 2.5, 2.5, 0]))
 ### 3.flatten
 
 #### Пример
-```markdown
-```python
+```
 print(flatten([[1, 2], (3, 4, 5)]))
 print(flatten([[1], [], [2, 3]]))
 print(flatten([[1, 2], "ab"]))
@@ -44,8 +41,7 @@ print(flatten([[1, 2], "ab"]))
 ### 1. transpose
 
 #### пример 
-```markdown
-```python
+```
 print(transpose([[1, 2, 3]]))          
 print(transpose([[1], [2], [3]]))      
 print(transpose([[1, 2], [3, 4]]))     
@@ -57,8 +53,7 @@ print(transpose([[1, 2], [3]]))
 ### 2. row_sums
 
 #### пример 
-```markdown
-```python
+```
 print(row_sums([[1, 2, 3], [4, 5, 6]]))     
 print(row_sums([[-1, 1], [10, -10]]))        
 print(row_sums([[0, 0], [0, 0]]))            
@@ -70,8 +65,7 @@ print(row_sums([[1, 2], [3]]))
 ### 3. col_sums
 
 #### пример 
-```markdown
-```python
+```
 print(col_sums([[1, 2, 3], [4, 5, 6]]))     
 print(col_sums([[-1, 1], [10, -10]]))        
 print(col_sums([[0, 0], [0, 0]]))            
@@ -84,7 +78,7 @@ print(col_sums([[1, 2], [3]]))
 
 #### пример 
 ```markdown
-```python
+```
 print(format_record(("Иванов Иван Иванович", "BIVT-25", 4.6)))  
 print(format_record(("Петров Петр ", "IKBO-12", 5.0)))  
 print(format_record(("Петров Пётр Петрович", "IKBO-12" , 5.0)))  
