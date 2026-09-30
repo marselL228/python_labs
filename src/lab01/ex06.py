@@ -8,6 +8,7 @@ for x in range(n):
         k += 1
     else:
         m += 1
-print(k,m)
+print('out:', k, m)
+
 
 
