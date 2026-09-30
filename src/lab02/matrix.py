@@ -3,8 +3,8 @@ def transpose(mat: list[list[float | int]]) -> list[list]:
     if len(mat)==0:
         return []
     if all(len(x)==len(mat[0]) for x in mat):
-        st = len(mat[0]) #2
-        n = len(mat) #3
+        st = len(mat[0]) 
+        n = len(mat) 
         nmat=[]
         for i in range(st):
             nrow = []
