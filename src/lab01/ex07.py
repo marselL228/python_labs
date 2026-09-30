@@ -1,4 +1,3 @@
-'''Lab 01, exercise 07'''
 n = input('Ввод: ')
 k = []
 

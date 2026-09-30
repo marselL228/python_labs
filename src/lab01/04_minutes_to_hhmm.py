@@ -1,4 +1,3 @@
-'''Lab 01, exercise 04.'''
 minutes = int(input('m: '))
 pr = minutes //60
 min = minutes % 60

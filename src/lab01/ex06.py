@@ -1,4 +1,3 @@
-'''Lab 01, exercise 06'''
 n = int(input('in_1: '))
 k = 0
 m = 0

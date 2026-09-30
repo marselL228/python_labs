@@ -1,4 +1,3 @@
-"""Lab 01, exercise 03."""
 price = float(input('price: ').replace(',', '.'))
 discount = float(input('discount: ').replace(',', '.'))
 vat = float(input('vat: ').replace(',', '.'))
