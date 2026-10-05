@@ -1,3 +1,4 @@
+###ЛР3
 import re
 def normalize(text: str, *, casefold: bool = True, yo2e: bool = True, strip: bool = True) -> str:
     if casefold == True:
