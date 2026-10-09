@@ -43,6 +43,8 @@ def top_n(freq: dict[str, int], n: int = 5) -> list[tuple[str, int]]:
     sort_freq = sorted(freq.items(), key=lambda x: x[1], reverse=True)
     return sort_freq[:n]
 print(k * 15, 'COUNT_FREQ + TOP_N', k * 15)
-print(count_freq(['a','b','a','c','b','a']), '+', top_n(count_freq(['a','b','a','c','b','a']), n=2))
-print(count_freq(['bb','aa','bb','aa','cc']), '+', top_n(count_freq(['bb','aa','bb','aa','cc']), n=2))
+print(count_freq(['a','b','a','c','b','a']))
+print(top_n(count_freq(['a','b','a','c','b','a']), n=2))
+print(count_freq(['bb','aa','bb','aa','cc']))
+print(top_n(count_freq(['bb','aa','bb','aa','cc']), n=2))
 print(k*54)

@@ -83,7 +83,7 @@ print(count_freq(['bb','aa','bb','aa','cc']), '+', top_n(count_freq(['bb','aa','
 ```
 
 ##### Результат:
-![Скриншот запуска задания 1.3](../../images/lab03/count_freq%20+%20top_n.jpg)
+![Скриншот запуска задания 1.3](../../images/lab03/count_freq+top_n.jpg)
 
 
 ## Задание В - text_stats.py
