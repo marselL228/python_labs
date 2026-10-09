@@ -60,7 +60,7 @@ print(normalize('Hello\r\nWorld'))
 print(normalize('  двойные  пробелы  '))
 ```
 ##### Результат:
-tut skrin nuzhen 
+![Скриншот запуска задания 1.1](../../images/lab03/normalize.jpg)
 
 
 #### Проверка tokenize:
@@ -73,7 +73,7 @@ print(tokenize('emoji 😀 не слово'))
 ```
 
 ##### Результат:
-скрин нужен
+![Скриншот запуска задания 1.2](../../images/lab03/tokenize.jpg)
 
 
 #### Проверка count_freq() и top_n():
@@ -83,7 +83,7 @@ print(count_freq(['bb','aa','bb','aa','cc']), '+', top_n(count_freq(['bb','aa','
 ```
 
 ##### Результат:
-скрин нужен
+![Скриншот запуска задания 1.3](../../images/lab03/count_freq%20+%20top_n.jpg)
 
 
 ## Задание В - text_stats.py
@@ -112,7 +112,7 @@ if __name__ == '__main__':
 ```
 
 #### Результат:
-скрин нужен
+![Скриншот запуска задания 2](../../images/lab03/text_stats.jpg)
 
 
 
