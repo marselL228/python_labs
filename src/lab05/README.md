@@ -176,7 +176,7 @@ def csv_to_xlsx(csv_path: str, xlsx_path: str) -> None:
 
 ![Скриншот запуска программы](../../images/lab05/cities.jpg)
 
-
+![Скриншот запуска программы](../../images/lab05/xlsxworkers.jpg)
 
 ### Обработка ошибок
 
