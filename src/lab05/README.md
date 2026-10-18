@@ -164,7 +164,7 @@ def csv_to_xlsx(csv_path: str, xlsx_path: str) -> None:
 ```
 
 ## тесты
-![Папка с результатами](../../data/out/)
+[Папка с результатами](../../data/out/)
 ![Скриншот запуска программы](../../images/lab05/test.jpg)
 
 
