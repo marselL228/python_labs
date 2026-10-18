@@ -164,7 +164,7 @@ def csv_to_xlsx(csv_path: str, xlsx_path: str) -> None:
 ```
 
 ## тесты
-[Папка с результатами](../../data/out/)
+[Папка с результатами](../../data//lab05/out/)
 
 ![Скриншот запуска программы](../../images/lab05/test.jpg)
 
@@ -188,3 +188,12 @@ def csv_to_xlsx(csv_path: str, xlsx_path: str) -> None:
 • отсутствие заголовка CSV — ValueError.
 
 Для обработки ошибок используются проверки условий и исключения raise. При запуске тестов применяется try-except.
+
+### Установка зависимостей
+
+Для работы используются стандартные модули `json`, `csv`
+и `pathlib`, а для Excel — библиотека `openpyxl`.
+
+```
+python -m pip install -r requirements.txt
+```
