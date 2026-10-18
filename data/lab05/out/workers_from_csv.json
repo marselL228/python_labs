@@ -1,0 +1,23 @@
+[
+  {
+    "id": "1",
+    "name": "Ivan Petrov",
+    "position": "Developer",
+    "salary": "85000",
+    "department": "IT"
+  },
+  {
+    "id": "2",
+    "name": "Anna Smirnova",
+    "position": "Accountant",
+    "salary": "65000",
+    "department": "Finance"
+  },
+  {
+    "id": "3",
+    "name": "Petr Sidorov",
+    "position": "Manager",
+    "salary": "90000",
+    "department": "Sales"
+  }
+]
