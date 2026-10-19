@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "python-labs"
+version = "0.1.0"
+description = "Лабораторные работы по Python"
+requires-python = ">=3.10"
+dependencies = [
+    "openpyxl",
+]
+
+[project.scripts]
+cat = "src.lab06.cli_text:cat_main"
+stats = "src.lab06.cli_text:stats_main"
+json2csv = "src.lab06.cli_convert:json2csv_main"
+csv2json = "src.lab06.cli_convert:csv2json_main"
+csv2xlsx = "src.lab06.cli_convert:csv2xlsx_main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
