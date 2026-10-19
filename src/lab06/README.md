@@ -18,7 +18,7 @@
 
 Из корневой папки проекта выполнена установка в режиме разработки:
 
-```powershell
+```python
 python -m pip install -e .
 ```
 
@@ -28,7 +28,7 @@ python -m pip install -e .
 
 ### 1. Вывод содержимого файла с нумерацией строк
 
-```powershell
+```python
 python -m src.lab06.cli_text cat --input data/lab05/samples/people.csv -n
 ```
 
@@ -38,7 +38,7 @@ python -m src.lab06.cli_text cat --input data/lab05/samples/people.csv -n
 
 ### 2. Подсчёт частоты слов
 
-```powershell
+```python
 python -m src.lab06.cli_text stats --input data/lab_04/input.txt --top 5
 ```
 
@@ -50,19 +50,19 @@ python -m src.lab06.cli_text stats --input data/lab_04/input.txt --top 5
 
 Преобразование CSV в JSON
 
-```powershell
+```python
 python -m src.lab06.cli_convert csv2json --input data/lab05/samples/people.csv --output data/lab06/out/people_converted.json
 ```
 
 Преобразование JSON в CSV:
 
-```powershell
+```python
 python -m src.lab06.cli_convert json2csv --input data/lab06/out/people_converted.json --output data/lab06/out/people_roundtrip.csv
 ```
 
 Преобразование CSV в XLSX:
 
-```powershell
+```python
 python -m src.lab06.cli_convert csv2xlsx --input data/lab05/samples/people.csv --output data/lab06/out/people.xlsx
 ```
 
@@ -77,7 +77,7 @@ python -m src.lab06.cli_convert csv2xlsx --input data/lab05/samples/people.csv -
 
 Справка текстового модуля:
 
-```powershell
+```python
 python -m src.lab06.cli_text --help
 ```
 ![Справка команд](../../images/lab06/text_help.jpg)
@@ -85,7 +85,7 @@ python -m src.lab06.cli_text --help
 
 Справка команды `cat`:
 
-```powershell
+```python
 python -m src.lab06.cli_text cat --help
 ```
 ![Справка команд](../../images/lab06/cat_help.jpg)
@@ -93,7 +93,7 @@ python -m src.lab06.cli_text cat --help
 
 Справка команды `stats`:
 
-```powershell
+```python
 python -m src.lab06.cli_text stats --help
 ```
 ![Справка команд](../../images/lab06/stats_help.jpg)
@@ -101,7 +101,7 @@ python -m src.lab06.cli_text stats --help
 
 Справка модуля преобразования:
 
-```powershell
+```python
 python -m src.lab06.cli_convert --help
 ```
 ![Справка команд](../../images/lab06/convert_help.jpg)
@@ -109,7 +109,7 @@ python -m src.lab06.cli_convert --help
 
 Справка команды `json2csv`:
 
-```powershell
+```python
 python -m src.lab06.cli_convert json2csv --help
 ```
 ![Справка команд](../../images/lab06/j2soncsv_help.jpg)
@@ -117,7 +117,7 @@ python -m src.lab06.cli_convert json2csv --help
 
 Справка команды `csv2json`:
 
-```powershell
+```python
 python -m src.lab06.cli_convert csv2json --help
 ```
 ![Справка команд](../../images/lab06/csv2json_help.jpg)
@@ -125,7 +125,7 @@ python -m src.lab06.cli_convert csv2json --help
 
 Справка команды `csv2xlsx`:
 
-```powershell
+```python
 python -m src.lab06.cli_convert csv2xlsx --help
 ```
 ![Справка команд](../../images/lab06/csv2xlsx_help.jpg)
