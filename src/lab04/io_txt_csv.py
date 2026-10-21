@@ -33,23 +33,35 @@ def write_csv(rows: Iterable[Sequence], path: str | Path,
     Записывает строки rows в CSV-файл path с разделителем ",".
 
     Если указан header - он записывается первой строкой файла.
-
-    Файл создаётся заново (если его не было) либо полностью
-    перезаписывается (если уже существовал).
-
-    Перед записью проверяется, что все строки в rows имеют
-    одинаковую длину. Если это не так - поднимается ValueError.
-    Если header задан, его длина тоже должна совпадать с длиной строк.
-
-    Если rows пуст и header=None - создаётся пустой файл (0 строк).
-    Если rows пуст, а header задан - в файле будет только заголовок.
+    Если длины строк или заголовка не совпадают, возникает ValueError.
     """
     p = Path(path)
     rows = list(rows)
+
+    try:
+        if rows:
+            expected_length = len(rows[0])
+
+            for r in rows:
+                if len(r) != expected_length:
+                    raise ValueError("Все строки должны иметь одинаковую длину")
+
+        else:
+            expected_length = len(header) if header is not None else None
+
+        if header is not None and expected_length is not None:
+            if len(header) != expected_length:
+                raise ValueError("Длина заголовка должна совпадать с длиной строк")
+
+    except ValueError:
+        raise
+
     with p.open("w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
+
         if header is not None:
             w.writerow(header)
+
         for r in rows:
             w.writerow(r)
 
