@@ -5,5 +5,5 @@ __pycache__/
 
 .vscode/
 .venv/
-.pyproject.toml/
+pyproject.toml
 
