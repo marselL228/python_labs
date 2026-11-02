@@ -6,4 +6,5 @@ __pycache__/
 .vscode/
 .venv/
 pyproject.toml
+src/lab07/tests/
 
