@@ -1,0 +1,20 @@
+task,n,impl,seconds
+sort,1000,bubble_sort,0.05716759990900755
+sort,1000,insertion_sort,0.02747329999692738
+sort,1000,selection_sort,0.028198800049722195
+sort,1000,sorted,9.230012074112892e-05
+sort,10000,bubble_sort,4.1096830000169575
+sort,10000,insertion_sort,1.9341147998347878
+sort,10000,selection_sort,1.7921808999963105
+sort,10000,sorted,0.0009080998133867979
+sort,100000,bubble_sort,> 60 s
+sort,100000,insertion_sort,> 60 s
+sort,100000,selection_sort,> 60 s
+sort,100000,sorted,0.013710400089621544
+search_prepare,100000,sorted,0.022416000021621585
+search_10000_queries,100000,linear_search,39.03997949999757
+search_10000_queries,100000,binary_search,0.020748799899592996
+two_sum,1000,two_sum_brute,0.02129329997114837
+two_sum,1000,two_sum_fast,8.370005525648594e-05
+two_sum,10000,two_sum_brute,3.091444800142199
+two_sum,10000,two_sum_fast,0.0010272001381963491

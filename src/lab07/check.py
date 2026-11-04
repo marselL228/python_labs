@@ -41,30 +41,42 @@ def check_search(trials=100):
 
 
 def check_two_sum(trials=100):
+    cases = [
+        ([], 0),
+        ([5], 10),
+        ([1, 2], 10),
+        ([3, 3], 6),
+        ([-3, 1, 4], 1),
+    ]
+
     for _ in range(trials):
-        n = random.randint(2, 50)
+        n = random.randint(0, 50)
         nums = [random.randint(-100, 100) for _ in range(n)]
+        target = random.randint(-200, 200)
 
-        # Создаём сумму двух разных элементов
-        i = random.randint(0, n - 1)
-        j = random.randint(0, n - 1)
+        cases.append((nums, target))
 
-        while i == j:
-            j = random.randint(0, n - 1)
+    for nums, target in cases:
+        brute = two_sum_brute(nums, target)
+        fast = two_sum_fast(nums, target)
 
-        target = nums[i] + nums[j]
+        assert (brute is None) == (fast is None), (
+            f"Алгоритмы расходятся: nums={nums}, target={target}, "
+            f"brute={brute}, fast={fast}"
+        )
 
-        # Проверяем оба алгоритма
-        for fn in (two_sum_brute, two_sum_fast):
-            result = fn(nums, target)
+        for result in (brute, fast):
+            if result is not None:
+                i, j = result
 
-            assert result is not None, f"{fn.__name__} не нашла пару в {nums}"
+                assert 0 <= i < j < len(nums), (
+                    f"Некорректные индексы: {result}, nums={nums}"
+                )
 
-            first, second = result
-
-            assert first != second and nums[first] + nums[second] == target, (
-                f"{fn.__name__} вернула неправильную пару: {result}, список: {nums}"
-            )
+                assert nums[i] + nums[j] == target, (
+                    f"Неверная сумма: nums={nums}, "
+                    f"target={target}, result={result}"
+                )
 
 
 if __name__ == "__main__":
