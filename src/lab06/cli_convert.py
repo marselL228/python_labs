@@ -25,8 +25,8 @@ def csv2xlsx(input_path, output_path):
 def make_parser(description):
     """Создаёт парсер аргументов для команды конвертации."""
     parser = argparse.ArgumentParser(description=description)
-    parser.add_argument("--input", required=True, help="Входной файл")
-    parser.add_argument("--output", required=True, help="Выходной файл")
+    parser.add_argument("--in", dest="input", required=True, help="Входной файл")
+    parser.add_argument("--out", dest="output", required=True, help="Выходной файл")
     return parser
 
 
@@ -56,8 +56,8 @@ def main():
         ("csv2xlsx", "Преобразовать CSV в XLSX"),
     ]:
         subparser = subparsers.add_parser(command, help=description)
-        subparser.add_argument("--input", required=True, help="Входной файл")
-        subparser.add_argument("--output", required=True, help="Выходной файл")
+        subparser.add_argument("--in", dest="input", required=True, help="Входной файл")
+        subparser.add_argument("--out", dest="output", required=True, help="Выходной файл")
 
     args = parser.parse_args()
 

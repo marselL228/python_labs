@@ -37,6 +37,6 @@ def main():
     print("Новая запись — отдельный словарь:", updated is not student)
     print("Студентов из CSV:", len(students_from_csv(data / "students_input.csv")))
 
-SS
+
 if __name__ == "__main__":
     main()

@@ -51,19 +51,19 @@ python -m src.lab06.cli_text stats --input data/lab_04/input.txt --top 5
 Преобразование CSV в JSON
 
 ```python
-python -m src.lab06.cli_convert csv2json --input data/lab05/samples/people.csv --output data/lab06/out/people_converted.json
+python -m src.lab06.cli_convert csv2json --in data/lab05/samples/people.csv --out data/lab06/out/people_converted.json
 ```
 
 Преобразование JSON в CSV:
 
 ```python
-python -m src.lab06.cli_convert json2csv --input data/lab06/out/people_converted.json --output data/lab06/out/people_roundtrip.csv
+python -m src.lab06.cli_convert json2csv --in data/lab06/out/people_converted.json --out data/lab06/out/people_roundtrip.csv
 ```
 
 Преобразование CSV в XLSX:
 
 ```python
-python -m src.lab06.cli_convert csv2xlsx --input data/lab05/samples/people.csv --output data/lab06/out/people.xlsx
+python -m src.lab06.cli_convert csv2xlsx --in data/lab05/samples/people.csv --out data/lab06/out/people.xlsx
 ```
 
 Ожидаемый результат: команды выполняются без ошибок и создают выходные файлы по указанным путям.
@@ -104,7 +104,7 @@ python -m src.lab06.cli_text stats --help
 ```python
 python -m src.lab06.cli_convert --help
 ```
-![Справка команд](../../images/lab06/convert_help.jpg)
+![Справка команд](../../images/lab06/convert_helpa.jpg)
 
 
 Справка команды `json2csv`:
@@ -112,7 +112,7 @@ python -m src.lab06.cli_convert --help
 ```python
 python -m src.lab06.cli_convert json2csv --help
 ```
-![Справка команд](../../images/lab06/j2soncsv_help.jpg)
+![Справка команд](../../images/lab06/j2soncsv_helpa.jpg)
 
 
 Справка команды `csv2json`:

@@ -4,6 +4,12 @@ import argparse
 from src.lab04.io_txt_csv import read_text
 from src.lib.text import normalize, tokenize, count_freq, top_n
 
+def positive_int(value):
+    number = int(value)
+    if number < 1:
+        raise argparse.ArgumentTypeError("--top должен быть больше 0")
+    return number
+
 
 def cat(input_path, number_lines=False):
     """Выводит содержимое файла."""
@@ -16,7 +22,7 @@ def cat(input_path, number_lines=False):
             print(line)
 
 
-def stats(input_path, top=10):
+def stats(input_path, top=5):
     """Выводит самые частые слова."""
     if top < 1:
         raise ValueError("Параметр --top должен быть положительным")
@@ -41,7 +47,7 @@ def stats_main():
     """Точка входа команды stats."""
     parser = argparse.ArgumentParser(description="Статистика частоты слов")
     parser.add_argument("--input", required=True, help="Входной файл")
-    parser.add_argument("--top", type=int, default=10, help="Количество слов")
+    parser.add_argument("--top", type=positive_int, default=5, help="Количество слов")
     args = parser.parse_args()
     stats(args.input, args.top)
 
@@ -57,7 +63,7 @@ def main():
 
     stats_parser = subparsers.add_parser("stats", help="Подсчитать частоту слов")
     stats_parser.add_argument("--input", required=True, help="Входной файл")
-    stats_parser.add_argument("--top", type=int, default=10, help="Количество слов")
+    stats_parser.add_argument("--top", type=positive_int, default=5, help="Количество слов")
 
     args = parser.parse_args()
 
