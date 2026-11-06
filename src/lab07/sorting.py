@@ -1,4 +1,5 @@
 def bubble_sort(nums):
+    """пузырьком"""
     """Новый список, отсортированный по возрастанию. Исходный не меняется."""
     result = nums.copy()
     n = len(result)
@@ -12,6 +13,7 @@ def bubble_sort(nums):
  
  
 def insertion_sort(nums):
+    """вставками"""
     """Тот же контракт, что у bubble_sort."""
     result = nums.copy()
     for i in range(1, len(result)):
@@ -25,6 +27,7 @@ def insertion_sort(nums):
  
  
 def selection_sort(nums):
+    """выбором"""
     """Тот же контракт, что у bubble_sort."""
     result = nums.copy()
     for i in range(len(result)):
@@ -34,4 +37,4 @@ def selection_sort(nums):
                 min_idx = j
         result[i], result[min_idx] = result[min_idx], result[i]
     return result
-  
+    
