@@ -1,4 +1,4 @@
-"""Запуск из корня репозитория: python -m src.lab08.demo."""
+"""Запуск из корня репозитория: python -m src.lab08.demon"""
 
 from datetime import date
 from pathlib import Path
