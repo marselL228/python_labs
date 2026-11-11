@@ -9,10 +9,13 @@ def make_student(fio, birthdate, group, gpa) -> dict:
     """Проверяет поля и создаёт новую запись студента."""
     if not isinstance(fio, str) or not fio.strip():
         raise ValueError("fio: нужна непустая строка")
+    
     if not isinstance(group, str) or not group.strip():
         raise ValueError("group: нужна непустая строка")
+    
     if not isinstance(birthdate, str):
         raise ValueError("birthdate: нужна строка YYYY-MM-DD")
+    
     try:
         birthday = date.fromisoformat(birthdate)
     except ValueError:

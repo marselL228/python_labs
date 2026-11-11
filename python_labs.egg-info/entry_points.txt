@@ -1,0 +1,6 @@
+[console_scripts]
+cat = src.lab06.cli_text:cat_main
+csv2json = src.lab06.cli_convert:csv2json_main
+csv2xlsx = src.lab06.cli_convert:csv2xlsx_main
+json2csv = src.lab06.cli_convert:json2csv_main
+stats = src.lab06.cli_text:stats_main

@@ -21,6 +21,11 @@
 ```python
 python -m pip install -e .
 ```
+или
+
+```python
+python -m pip install -r requirements.txt
+```
 
 ## Сценарии запуска
 

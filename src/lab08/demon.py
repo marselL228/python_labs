@@ -30,7 +30,7 @@ def main():
         print(error)
 
     student = students[0]
-    print("\nВозраст до дня рождения:", student_age(student, date(2026, 9, 19)))
+    print("\nВозраст до дня рождения:", student_age(student, date(2026,9,19)))
     print("Возраст в день рождения:", student_age(student, date(2026, 9, 20)))
     updated = update_student(student, gpa=4.8)
     print("\nОбновление GPA:", student["gpa"], "->", updated["gpa"])
@@ -38,5 +38,7 @@ def main():
     print("Студентов из CSV:", len(students_from_csv(data / "students_input.csv")))
 
 
+
 if __name__ == "__main__":
     main()
+
