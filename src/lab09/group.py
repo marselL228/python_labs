@@ -1,7 +1,9 @@
 """CSV-хранилище студентов и CRUD-операции над ним."""
 
 import csv
+from collections import Counter
 from pathlib import Path
+from statistics import mean
 
 from src.lab08.models import STUDENT_FIELDS, student_from_dict, validate_student
 
@@ -74,11 +76,15 @@ def save_students(path, students) -> None:
 
 
 def add_student(path, student: dict) -> None:
-    """Валидирует и добавляет студента в конец хранилища."""
+    """Добавляет валидную запись, если такого ФИО ещё нет."""
     validate_student(student)
     checked_student = student_from_dict(student)
 
     students = load_students(path)
+    fio = checked_student["fio"]
+    if any(record["fio"] == fio for record in students):
+        raise ValueError(f"Запись с таким ФИО уже есть: {fio}")
+
     students.append(checked_student)
     save_students(path, students)
 
@@ -147,3 +153,21 @@ def update_student(path, fio: str, **fields) -> bool:
             return True
 
     return False
+
+
+def stats(path) -> dict:
+    """Считает статистику по GPA, группам и пяти лучшим студентам."""
+    students = load_students(path)
+    gpas = [student["gpa"] for student in students]
+    top = sorted(students, key=lambda student: (-student["gpa"], student["fio"]))[:5]
+
+    return {
+        "count": len(students),
+        "min_gpa": min(gpas, default=None),
+        "max_gpa": max(gpas, default=None),
+        "avg_gpa": mean(gpas) if gpas else None,
+        "groups": dict(Counter(student["group"] for student in students)),
+        "top_5_students": [
+            {"fio": student["fio"], "gpa": student["gpa"]} for student in top
+        ],
+    }

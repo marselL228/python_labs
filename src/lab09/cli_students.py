@@ -1,6 +1,7 @@
 """Консольная CRUD-утилита для CSV-хранилища студентов."""
 
 import argparse
+import json
 import sys
 
 from src.lab08.models import format_student, student_from_dict
@@ -63,6 +64,8 @@ def build_parser() -> argparse.ArgumentParser:
     update_parser.add_argument("--birthdate")
     update_parser.add_argument("--group")
     update_parser.add_argument("--gpa")
+
+    subparsers.add_parser("stats", help="вывести статистику по студентам и группам")
 
     return parser
 
@@ -142,6 +145,9 @@ def main() -> int:
                     file=sys.stderr,
                 )
                 return 1
+
+        elif args.command == "stats":
+            print(json.dumps(group.stats(args.db), ensure_ascii=False, indent=2))
 
     except (KeyError, OSError, ValueError) as error:
         print(f"Ошибка: {error}", file=sys.stderr)
